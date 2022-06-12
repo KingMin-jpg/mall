@@ -33,7 +33,7 @@ class OrderModelViewSet(ReadOnlyModelViewSet):
 
     @action(methods=['put'], detail=True)  #detail=True  会生成：order(路由前缀)/pk(路由参数)/status(方法名)
     def status(self, request, *args, **kwargs):
-        a = 10000
+        a = 100
         status1 = request.data.get("status")
         order = self.get_object()
 
