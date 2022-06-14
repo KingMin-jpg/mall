@@ -36,6 +36,7 @@ class OrderModelViewSet(ReadOnlyModelViewSet):
         status1 = request.data.get("status")
         order = self.get_object()
 
+
         if not status:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
